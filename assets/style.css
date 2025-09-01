@@ -8,8 +8,9 @@ body {
 }
 .top-header {
 	background-color: white;
-	position: sticky;
+	position: fixed;
 	top:0;
+	width: 100%;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
@@ -22,18 +23,18 @@ body {
 	font-size: 26px;
 }
 
-.nav ul {
+nav ul, .nav ul {
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
-.nav li {
+nav li, .nav li {
 	padding-inline: 10px;
 }
 
-.nav a {
+nav a, .nav a {
 	text-decoration: none;
 	color: #000
 }
@@ -41,7 +42,15 @@ body {
 .social-link img {
 	width: 20px;
 }
-
+.carousel-inner {
+	margin-top: 99.2px;
+	max-width: 1920px;
+	max-height: 888px;
+}
+.d-block-w-100 {
+	width: 100%;
+	height: auto;
+}
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -69,7 +78,7 @@ body {
 
 .picture img {
 	width: 100%;
-
+	height: auto;
 }
 #about-me {
 	flex: 2
@@ -79,11 +88,12 @@ body {
 	margin-bottom: 60px;
 	font-size: 30px;
 }
-.about-me__introduction {
-	font-family: 'Spectral';
-	font-weight: 800;
-	font-style: italic;
-	width: 60%;
+#about-me p.about-me__introduction {
+    font-family: 'Spectral';
+    font-weight: 800;
+    font-style: italic;
+    width: 60%;
+    font-size: 1rem;
 }
 #about-me p {
 	width: 80%;
@@ -102,7 +112,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #5F5725;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -143,11 +153,21 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
-.quote__text {
-	font-family: Spectral;
+.quote__text  {
+	font-size: calc(1.375rem + 1.5vw);
+	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
-
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.2;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+@media (min-width: 1200px) {
+  .quote__text  {
+    font-size: 2.5rem;
+  }
 }
 .quote__author {
 	font-family: Spectral;
@@ -188,6 +208,14 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+.service__price h3 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  .service__price h3 {
+    font-size: 1.5rem;
+  }
 }
 
 #contact {
@@ -255,7 +283,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me p {
 		width: 100%;
 	}
 }
@@ -323,6 +351,7 @@ input[type="submit"] {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
+		width: 100%;
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
