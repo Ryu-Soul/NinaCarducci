@@ -38,9 +38,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-  </noscript>
   <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
   <script src="./assets/maugallery.js" defer></script>
@@ -61,7 +58,7 @@
 		</nav>
 	</div>
 	<div id="header">
-		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height:888px;">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Ryoji Iwata"></button>
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2 - Nicholas Green"></button>
@@ -69,7 +66,7 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="./assets/images/slider/ryoji-iwata.webp" width="1920" height="888" class="d-block-w-100" alt="photograph of Ryoji Iwata crossing a crosswalk">
+					<img src="./assets/images/slider/ryoji-iwata.webp" width="1920" height="888" class="d-block-w-100" alt="photograph of Ryoji Iwata crossing a crosswalk" fetchpriority="high">
 				</div>
 				<div class="carousel-item">
 					<img src="./assets/images/slider/nicholas-green.webp" width="1920" height="888" loading="lazy" class="d-block-w-100" alt="photograph of Nicholas Green at a concert">
